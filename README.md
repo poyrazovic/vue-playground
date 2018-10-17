@@ -1,22 +1,18 @@
 # nuxt-playground
 
-> Learning NuxtJS
+> A Vue.js project
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ yarn install
+npm install
 
-# serve with hot reload at localhost:3000
-$ yarn run dev
+# serve with hot reload at localhost:8080
+npm run dev
 
-# build for production and launch server
-$ yarn run build
-$ yarn start
-
-# generate static project
-$ yarn run generate
+# build for production with minification
+npm run build
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
