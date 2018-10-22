@@ -21,11 +21,6 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "eslintConfig": {
-    "globals": {
-      "window": true
-    }
-  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

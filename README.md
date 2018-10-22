@@ -1,18 +1,20 @@
-# nuxt-playground
+# vue-playground
 
-> A Vue.js project
+> A Vue.js project. This project using [ReqRes API](https://reqres.in).
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-npm install
+$ yarn
+-- or --
+$ yarn install
 
 # serve with hot reload at localhost:8080
-npm run dev
+$ yarn dev
 
 # build for production with minification
-npm run build
+$ yarn build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).

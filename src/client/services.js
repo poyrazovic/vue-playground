@@ -1,24 +1,26 @@
 import axios from 'axios';
+import { router } from '../routes/router';
 
 const API = 'https://reqres.in/api';
 const headers = {
   'Content-Type': 'application/json',
 };
 
-const login = (email, password) => (
+const login = (username, password) => (
   axios.post(`${API}/login`, {
-    email,
+    username,
     password,
   }, {
     headers,
   }).then((res) => {
     localStorage.setItem('token', res.data.token);
-    this.$router.push('/dashboard');
+    router.push('/dashboard');
   }).catch(err => err)
 );
 
 const logout = () => {
   localStorage.removeItem('token');
+  router.push('/');
 };
 
 export const services = {

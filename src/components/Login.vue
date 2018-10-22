@@ -1,6 +1,6 @@
 <script>
 import Message from './Message.vue';
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions } from 'vuex';
 
 export default {
   name: 'Login',
@@ -15,12 +15,16 @@ export default {
     ...mapState('login', ['status'])
   },
   created () {
-    // reset login status
-    this.logout();
+    const token = localStorage.getItem('token');
+    if(token && token.length > 0) {
+      this.$router.push('/dashboard');
+    } else {
+      this.logout();
+    }
   },
   methods: {
     ...mapActions('login', ['login', 'logout']),
-    handleSubmit (e) {
+    handleSubmit () {
       this.submitted = true;
       const { username, password } = this;
       if (username && password) {
@@ -41,12 +45,12 @@ export default {
       <div class="form-group">
         <label for="username">Username</label>
         <input type="text" name="username" id="username" class="form-control" v-model="username">
-        <p class="text-danger form-group-error" v-show="submitted && !username">Required!</p>
+        <p class="text-danger form-group-error" v-show="submitted && !username && (username.length < 3)">Required!</p>
       </div>
       <div class="form-group">
         <label for="password">Password</label>
         <input type="password" name="password" id="password" class="form-control" v-model="password">
-        <p class="text-danger form-group-error" v-show="submitted && !username">Required!</p>
+        <p class="text-danger form-group-error" v-show="submitted && !password">Required!</p>
       </div>
       <button class="btn btn-primary">LOGIN</button>
     </form>
@@ -56,7 +60,6 @@ export default {
 
 <style lang="sass">
 .Login
-  font-family: 'Poppins', sans-serif
   width: 100%
   max-width: 450px
   margin: 50px auto

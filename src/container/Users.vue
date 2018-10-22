@@ -9,6 +9,6 @@
 </script>
 <template>
   <Default>
-    <h3>Dashboard</h3>
+    <h3>Users</h3>
   </Default>
 </template>
