@@ -1,4 +1,4 @@
-# vue-playground
+# Vue ReqRes API
 
 > A Vue.js project. This project using [ReqRes API](https://reqres.in).
 
