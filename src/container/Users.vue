@@ -8,7 +8,7 @@
   }
 </script>
 <template>
-  <Default>
-    <h3>Users</h3>
+  <Default :title="'Users'">
+
   </Default>
 </template>

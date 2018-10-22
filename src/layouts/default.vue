@@ -3,12 +3,14 @@ import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 export default {
   name: 'default',
+  props: ['title'],
   components: {
     Header,
     Sidebar,
   },
 }
 </script>
+
 <template>
   <section class="Default-layout">
     <Header />
@@ -20,9 +22,18 @@ export default {
           </div>
         </div>
         <div class="col-10 p-4">
+          <h3>{{title ? title : ''}}</h3>
           <slot />
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<style lang="sass">
+.Default-layout
+  h3
+    font:
+      weight: 600
+      size: 24px
+</style>

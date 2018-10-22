@@ -28,9 +28,10 @@ export default {
 </template>
 <style lang="sass">
 .Header
+  border-bottom: 1px solid rgba(#000, .03)
   h1
     color: #000
     font-weight: 700
     font-size: 24px
-    margin: 0
+    margin: 5px 0 0
 </style>

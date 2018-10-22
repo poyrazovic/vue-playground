@@ -8,7 +8,7 @@
   }
 </script>
 <template>
-  <Default>
-    <h3>Dashboard</h3>
+  <Default :title="'Dashboard'">
+
   </Default>
 </template>
