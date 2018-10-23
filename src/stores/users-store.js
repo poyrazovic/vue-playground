@@ -19,7 +19,7 @@ const actions = {
       });
   },
   userDetail({ commit }, userId) {
-    commit('userRequest');
+    commit('profileRequest', userId);
     services.getUser(userId)
       .then((res) => {
         commit('userSuccess', res);
@@ -43,7 +43,7 @@ const mutations = {
     state.data = {};
     state.loading = false;
   },
-  userRequest(state) {
+  profileRequest(state) {
     state.user = {};
     state.loading = true;
   },

@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Login from '../components/Login.vue';
 import Dashboard from '../container/Dashboard.vue';
 import Users from '../container/Users.vue';
+import Profile from '../container/Profile.vue';
 
 Vue.use(Router);
 
@@ -32,16 +33,17 @@ export const router = new Router({
         title: 'Users - Vue Playground',
         layout: 'default',
       },
+    },
+    {
+      path: '/user/:id',
+      component: Profile,
+      meta: {
+        title: 'Profile - Vue Playground',
+        layout: 'default',
+      },
       children: [
-        {
-          path: ':id',
-          component: Users,
-          meta: {
-            title: 'User Profile - Vue Playground',
-            layout: 'default',
-          },
-        },
-      ],
+
+      ]
     },
     { path: '*', redirect: '/dashboard' },
   ],

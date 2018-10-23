@@ -33,7 +33,7 @@ const users = userListPage => (
 const getUser = userId => (
   axios.get(`${API}/users/${userId}`, {
     headers,
-  }).then(res => res)
+  }).then(res => res.data.data)
     .catch(err => err)
 );
 

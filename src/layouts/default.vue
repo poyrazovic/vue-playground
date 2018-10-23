@@ -36,4 +36,5 @@ export default {
     font:
       weight: 600
       size: 24px
+    padding: 0 15px
 </style>
