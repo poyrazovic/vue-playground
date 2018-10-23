@@ -26,7 +26,7 @@
 <template>
   <Default :title="'Users'">
     <Loader :status="loading" />
-    <Card v-show="data && data.data && data.data.length > 0">
+    <Card v-if="data && data.data && data.data.length > 0">
       <div class="table-responsive">
         <table class="table">
           <thead>
@@ -51,6 +51,7 @@
         </table>
       </div>
     </Card>
+    <Card v-if="data && data.data && data.data.length === 0">Result is not found!</Card>
     <Pagination :data="data" />
   </Default>
 </template>
