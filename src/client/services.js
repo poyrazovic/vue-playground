@@ -23,7 +23,23 @@ const logout = () => {
   router.push('/');
 };
 
+const users = userListPage => (
+  axios.get(`${API}/users?page=${userListPage || 1}`, {
+    headers,
+  }).then(res => res.data)
+    .catch(err => err)
+);
+
+const getUser = userId => (
+  axios.get(`${API}/users/${userId}`, {
+    headers,
+  }).then(res => res)
+    .catch(err => err)
+);
+
 export const services = {
   login,
   logout,
+  users,
+  getUser,
 };

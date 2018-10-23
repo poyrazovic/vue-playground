@@ -22,7 +22,7 @@ export default {
           </div>
         </div>
         <div class="col-10 p-4">
-          <h3>{{title ? title : ''}}</h3>
+          <h3 class="mb-3">{{title ? title : ''}}</h3>
           <slot />
         </div>
       </div>

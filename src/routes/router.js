@@ -32,6 +32,16 @@ export const router = new Router({
         title: 'Users - Vue Playground',
         layout: 'default',
       },
+      children: [
+        {
+          path: ':id',
+          component: Users,
+          meta: {
+            title: 'User Profile - Vue Playground',
+            layout: 'default',
+          },
+        },
+      ],
     },
     { path: '*', redirect: '/dashboard' },
   ],
